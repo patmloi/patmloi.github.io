@@ -1,0 +1,473 @@
+---
+---
+@import "main";
+
+.navbar-brand {
+    font-family: 'Tiro Gurmukhi', serif;
+};
+
+// Header
+#header {
+    position: relative; 
+    display: block; 
+    height: 30%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+   
+}
+
+
+#headerTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25vw;
+    position: absolute; 
+    top: -15vw;
+    opacity: 0.25;
+}
+
+#headerTitle.works{
+    color: #E7A77B; 
+}
+
+#headerTitle.articles{
+    color: #F5D686; 
+}
+
+#title {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 6vw; 
+
+    text-align: center;
+    color: #000000; 
+    opacity: 100%; 
+    top: 2.5vw;
+
+}
+// .container{
+//     position: relative; 
+// }
+
+// Home: Sections 
+.section{
+    position: relative; 
+    margin-left: 15%;
+    margin-right:15%
+}
+.sectionTitle {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 12vh;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin-top: 5vh;
+    margin-bottom: 2vh; 
+    
+}
+
+.sectionTitle.experience{
+    color: #ea9999;
+}
+.sectionTitle.skills{
+    color: #f9cb9c; 
+}
+.sectionTitle.works{
+    color: #ffe599; 
+}
+.sectionTitle.extracurriculars{
+    color: #b6d7a8; 
+}
+
+// .sectionTitleText{
+//     opacity: 0.25;
+// }
+
+.sectionDesc{
+    opacity: 0.7;
+}
+.sectionDesc.experience{
+    color: #f4cccc; 
+}
+.sectionDesc.skills{
+    color: #f9cb9c; 
+}
+.sectionDesc.works{
+    color: #ffe599; 
+}
+.sectionDesc.extracurriculars{
+    color: #b6d7a8; 
+}
+
+.sectionDesc{ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vh; 
+    // color:rgba(0,0,0,0.35);
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 5vh; 
+}
+
+.row{
+    margin: 2vh
+}
+
+.col{
+    text-align: center;
+    padding: 1vh;
+}
+
+
+// Home: Landing 
+#landing {
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+@media(max-width:941px) {
+    #landingText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+}
+@media(min-width:941px) {
+    #landingText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+    
+}
+
+#greeting {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 10vh;
+    color: #000000;
+    margin: 1vh;
+}
+
+#description{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vh;
+    color: rgba(0,0,0,0.7);
+    margin: 1vh;
+}
+
+// Home: Motivation
+#motivation{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+
+    font-family: "Segoe UI";
+    font-size: 1.2rem;
+    font-style: italic; 
+    color: #000000;
+
+    margin-left: 20%;
+    margin-right: 20%; 
+    padding: 1vh
+    
+}
+
+// Home: Experience
+div.timeline{
+    margin-top: 5vh;
+    margin-bottom: 5vh; 
+
+}
+.timeline {
+    position: relative;
+    list-style: none;
+}
+
+.exp{
+    position: relative;
+    list-style: none;
+}
+  
+
+@media(max-width:941px) {
+    .exp-duration{
+        text-align: center;
+    }
+
+    .exp-desc{
+        text-align: left;
+        border-bottom: 1px solid hsl(0, 0%, 90%);
+    }
+    
+}
+@media(min-width:941px) {
+    .exp-duration{
+        text-align: center;
+        border-right: 1px solid hsl(0, 0%, 90%);
+    }
+
+    .exp-desc{
+        text-align: left;
+    }
+}
+
+  .timeline .timeline-item {
+    position: relative;
+  }
+
+//   .timeline .timeline-item:after {
+//     position: absolute;
+//     display: block;
+//     top: 0;
+//   }
+  
+//   .timeline .timeline-item:after {
+//     background-color: hsl(0, 0%, 90%);
+//     left: -10%;
+//     border-radius: 50%;
+//     height: 11px;
+//     width: 11px;
+//     content: "";
+//   }
+
+// Home: Skills
+.skillsColTitle{
+    font-family: "Segoe UI";
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.5);
+    margin: 1vh;
+}
+
+// About
+#about{
+    position: relative; 
+    top: 15vw; 
+}
+
+#aboutTitle{
+    font-style: italic;
+}
+
+// Footer 
+
+.linkLogo {
+    color: #6c757d;
+    font-size: 1.5rem;
+    margin:1rem
+}
+
+#linkUpDiv {
+    // overflow: hidden;
+    width: 7rem;
+    height: 3rem;
+    position: absolute; 
+    right: -2vw;
+    bottom: -2vh;
+}
+#linkUpDivA {
+    font-size: 10rem; 
+
+}
+
+#linkUpLogo {
+    display: block; 
+    margin: auto;
+    width: 7rem;
+    height: 4rem;
+    font-size: 10rem; 
+
+}
+// Feed 
+.feed{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.feedItemLink{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: black;
+    &:hover{
+        text-decoration: none;
+        color: black;
+    }
+}
+.feedItem{
+    list-style: none;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw; 
+
+    border-radius: 15px; 
+    box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.05);
+
+    &:hover{
+        text-decoration: none;
+        box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
+    }
+    
+}
+.feedItemDiv {
+    margin-top: 1vh; 
+    margin-bottom: 1vh; 
+}
+
+.feedItemOrg{
+    font-weight: bold;
+}
+
+.feedItemOrg.assignment{
+    color: #ea9999;
+}
+
+.feedItemOrg.personal{
+    color: #f9cb9c; 
+
+}
+.feedItemTitle {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 8vh;
+    text-align: left;
+}
+
+.feedItemDesc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    color: rgba(0,0,0,0.7);
+}
+
+.feedItemClick{
+    font-family: 'Roboto', sans-serif;
+}
+.feedItemImg.feedItemDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedItemImg{
+    width: 95%;
+    height: auto;
+}
+
+// Post 
+#postBody{    
+    text-align: left;
+
+    div{
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+}
+
+#postTitle{
+    font-family: 'Tiro Gurmukhi', serif;
+
+}
+#postDesc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vw;
+}
+
+#postDuration {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; 
+}
+
+@media(max-width:941px) {
+    #postBody{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    #postTitle{
+        font-size: 5.8vh;
+    }
+    #postDuration{
+        font-size: 1.8vh;
+        margin-top: 1vh; 
+        margin-bottom: 1vh;
+    }
+    #postDesc{
+        font-size: 2.3vh;
+    } 
+
+
+}
+@media(min-width:941px) {
+    #postBody{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    #postTitle{
+        font-size: 6vw;
+    }
+    #postDesc{
+        font-size: 3.1vh;
+    }
+}
+
+
+#postContent{
+    font-family: 'Roboto', sans-serif;
+
+    h1{
+        font-family: 'Tiro Gurmukhi', serif;
+    }
+    h2{
+        font-family: 'Tiro Gurmukhi', serif;
+    }
+    @media(max-width:720px) {
+        h1{
+            font-size: 5vh;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        } 
+        h2{
+            font-size: 4.2vh;
+            margin-top: 4.8vh;
+            margin-bottom: 4.8vh;
+        } 
+        p{
+            font-size: 2.3vh;
+        }
+        li{
+            font-size: 2.3vh;
+        }
+        img{
+            width: 80vw; 
+        }
+    }
+    @media(min-width:720px) {
+        h1{
+            font-size: 2.8vw;
+            margin-top: 4vh;
+            margin-bottom: 4vh;
+        }
+
+        h2{
+            font-size: 2.2vw;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+
+        p{
+            font-size: 3.1vh;
+        }
+
+        li{
+            font-size: 3.1vh;
+        }
+        img{
+            width: 40vw; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+    }
+
+}

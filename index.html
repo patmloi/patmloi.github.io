@@ -1,0 +1,115 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Landing -->
+<div id="landing">
+    <div class="row">
+        <div class="col col-md-6">
+            <img src="assets/images/profile.jpg" width="50%">
+        </div>
+        <div id="landingText" class="col-md-6" text-align="left">
+            <div id="greeting">Hi, I'm Patricia.</div>
+            <div id="description">I do web development and data analytics.</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Motivation -->
+<div id="motivation">
+    I'm passionate about making information easily understandable: the sheer amount of 
+    information we get today makes it hard for individuals to identify what's important.
+    The combination of extracting key insights and making these easily accessible through good design
+    allows people to make the world a better place - one informed decision at a time. 
+</div>
+
+{% assign sections = site.indexSections | sort:"sectionNo" %}
+{% assign sectionsCount = 0 %}
+
+{% for section in sections %}
+{% assign sectionsCount = sectionsCount | plus:1 %}
+
+<div class="section"> 
+    <div class="sectionTitle {{section.title}}">{{section.title}}</div>
+    <div class="sectionDesc {{section.title}} "> {{section.description}} </div>
+    {% if section.title == 'skills' %}
+    <div class="row">
+        <div class="col">
+            <div class="skillsColTitle"> WEB DEVELOPMENT </div>
+            <div> 
+                Front-end: HTML, CSS, Bootstrap, SCSS, Javascript, Vue.js</br>
+                Back-end: Python, SQL (MySQL, MongoDB), Flask, FastAPI, PHP, Laravel</br>
+                Developer Tools: Git, Docker, Visual Studio Code, Freshping, Jira, Notion
+            </div>
+        </div>
+        <div class="col">
+            <div class="skillsColTitle" > DATA ANALYTICS </div>
+            <div> 
+                Data Visualisation: Microsoft Power BI, Tableau, D3.js, Vegalite</br>
+                Data Analytics: Python, scipy, matplotlib
+            </div>
+        </div>
+    </div>
+
+    {% elsif section.title == 'experience' %}
+    <div class="timeline">
+        <ul class="timeline">
+            {% assign experience = site.experiences | nested_sort:"date" | reverse %}
+            {% for exp in experience %}   
+            <li>
+                <div class="row exp">
+                    <div class="col-md-1 exp-duration"> 
+                        <p class="text-muted mb-2 fw-bold">{{exp.duration}}</p>
+                    </div>
+                    <div class="col-md-11 exp-desc">
+                        <h5 class="fw-bold">{{exp.title}}</h5>
+                        <p class="text-muted mb-2 fw-bold">{{exp.organisation}}</p>
+                        <p class="text-muted">{{exp.description}}</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    {% elsif section.title == 'works' %}
+    <div class="timeline">
+        <ul class="timeline">
+            {% assign works = site.works | nested_sort:"date" | reverse %}
+            {% assign worksCount = 0 %}
+            {% for work in works %}  
+            {% assign worksCount = worksCount | plus:1 %}
+
+            {%if worksCount >= 4 %} 
+                {% break %}
+            {% endif %}
+
+            <li>
+                <div class="row exp">
+                    <div class="col-md-1 exp-duration"> 
+                        <p class="text-muted mb-2 fw-bold">{{work.duration}}</p>
+                    </div>
+                    <div class="col-md-11 exp-desc">
+                        <h5 class="fw-bold">{{work.title}}</h5>
+                        <p class="text-muted mb-2 fw-bold">{{work.organisation}}</p>
+                        <p class="text-muted">{{work.description}}</p>
+                    </div>
+                </div>
+            </li>
+            
+            {% endfor %}
+            
+        </ul>
+    </div>
+    {% endif %}
+
+
+    
+    <!-- <p> {{section.content}} </p> -->
+</div>
+
+{% endfor %}
+

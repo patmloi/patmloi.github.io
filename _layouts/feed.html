@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<div>
+    <ul class="feed">
+        {% assign posts = site[page.folderName] | nested_sort:"date" | reverse %}
+        {% for post in posts %}
+        
+            <li class="feedItem">
+                <a class="feedItemLink" href={{post.url}}>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="feedItemOrg {{post.organisation | downcase }}">{{post.organisation}}</div>
+                            <div class="feedItemTitle feedItemDiv">{{post.title}}</div>
+                            <div class="feedItemDesc feedItemDiv">{{post.description}}</div>
+                            <!-- <div class="feedItemClick"><a href="{{post.url}}">Continue reading</a> </div> -->
+                        </div>
+                        <div class="col-md feedItemImg feedItemDiv">
+                            <img class="feedItemImg" src="/assets/images/coverImages/{{post.title}}.png">
+                            
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+
+        {% endfor %}
+
+    </ul>
+</div>

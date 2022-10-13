@@ -1,0 +1,48 @@
+title: "Patricia Loi"
+description: "A collation of all my work."
+
+collections:
+  authors:
+    output: true
+  indexSections:
+    output: true
+  works:
+    output: true
+  experiences:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "works"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "indexSections"
+    values:
+      layout: "section"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "post"
+
+
+plugins:
+  - jekyll-feed
+  
