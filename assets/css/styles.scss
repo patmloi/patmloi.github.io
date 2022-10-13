@@ -10,16 +10,11 @@
 #header {
     position: relative; 
     display: block; 
-    height: 30%;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
    
 }
 
-
 #headerTitle {
     font-family: 'Roboto', sans-serif;
-    font-size: 25vw;
     position: absolute; 
     top: -15vw;
     opacity: 0.25;
@@ -35,7 +30,7 @@
 
 #title {
     font-family: 'Tiro Gurmukhi', serif;
-    font-size: 6vw; 
+
 
     text-align: center;
     color: #000000; 
@@ -43,6 +38,32 @@
     top: 2.5vw;
 
 }
+
+@media(max-width:941px) {
+    #header {
+        margin-top: 3vh;
+        margin-bottom: 1.5vh;
+    }
+    #title{
+        font-size: 10vw;
+    }
+}
+@media(min-width:941px) {
+    .sectionTitle{
+        font-size: 12vh;
+    }
+    .sectionDesc{
+        font-size: 5vh; 
+    }
+    #header{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    #title{
+        font-size: 6vw; 
+    }
+}
+
 // .container{
 //     position: relative; 
 // }
@@ -55,12 +76,10 @@
 }
 .sectionTitle {
     font-family: 'Tiro Gurmukhi', serif;
-    font-size: 12vh;
     text-align: center;
     overflow-wrap: break-word;
     margin-top: 5vh;
     margin-bottom: 2vh; 
-    
 }
 
 .sectionTitle.experience{
@@ -98,22 +117,30 @@
 
 .sectionDesc{ 
     font-family: 'Roboto', sans-serif;
-    font-size: 5vh; 
     // color:rgba(0,0,0,0.35);
     text-align: center;
     margin-top: 2vh;
     margin-bottom: 5vh; 
 }
 
-.row{
-    margin: 2vh
-}
 
-.col{
-    text-align: center;
-    padding: 1vh;
-}
 
+@media(max-width:941px) {
+    .sectionTitle{
+        font-size: 12vw;
+    }
+    .sectionDesc{
+        font-size: 5vw; 
+    }
+}
+@media(min-width:941px) {
+    .sectionTitle{
+        font-size: 12vh;
+    }
+    .sectionDesc{
+        font-size: 5vh; 
+    }
+}
 
 // Home: Landing 
 #landing {
@@ -127,28 +154,71 @@
         justify-content: center;
         text-align: center;
     }
+    #greeting{
+        font-size: 5vh;
+    }
+    #description{
+        font-size: 2.5vh;
+    }
+    #motivation{
+        font-size: 2vh;
+        margin-left: 10%;
+        margin-right: 10%; 
+        text-align: left;
+    }
+    div.timeline{
+        margin-top: 5vw;
+        margin-bottom: 5vw; 
+    }
+    .row{
+        margin: 2vh;
+    }
+    .col{
+        text-align: center;
+        padding: 1vw;
+    }
     
+
 }
 @media(min-width:941px) {
     #landingText{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: left;
+        text-align: center;
     }
+    #greeting{
+        font-size: 10vh;
+    }
+    #description{
+        font-size: 5vh;
+    }
+    #motivation{
+        font-size: 3.5vh;
+        margin-left: 20%;
+        margin-right: 20%; 
+        text-align: center; 
+    }
+
+    .row{
+        margin: 2vh;
+    }
+    .col{
+        text-align: center;
+        padding: 1vh;
+    }
+
     
 }
 
 #greeting {
     font-family: 'Tiro Gurmukhi', serif;
-    font-size: 10vh;
     color: #000000;
     margin: 1vh;
 }
 
 #description{
     font-family: 'Roboto', sans-serif;
-    font-size: 5vh;
     color: rgba(0,0,0,0.7);
     margin: 1vh;
 }
@@ -157,25 +227,14 @@
 #motivation{
     display: flex;
     justify-content: center;
-    text-align: center; 
-
     font-family: "Segoe UI";
-    font-size: 1.2rem;
     font-style: italic; 
     color: #000000;
-
-    margin-left: 20%;
-    margin-right: 20%; 
     padding: 1vh
     
 }
 
 // Home: Experience
-div.timeline{
-    margin-top: 5vh;
-    margin-bottom: 5vh; 
-
-}
 .timeline {
     position: relative;
     list-style: none;
@@ -188,6 +247,11 @@ div.timeline{
   
 
 @media(max-width:941px) {
+    div.timeline{
+        margin-top: 5vh;
+        margin-bottom: 5vh; 
+    }
+
     .exp-duration{
         text-align: center;
     }
@@ -200,18 +264,20 @@ div.timeline{
 }
 @media(min-width:941px) {
     .exp-duration{
-        text-align: center;
+        text-align: left;
         border-right: 1px solid hsl(0, 0%, 90%);
     }
 
     .exp-desc{
         text-align: left;
     }
+
+    .timeline .timeline-item {
+        position: relative;
+      }
 }
 
-  .timeline .timeline-item {
-    position: relative;
-  }
+
 
 //   .timeline .timeline-item:after {
 //     position: absolute;
@@ -276,10 +342,6 @@ div.timeline{
 
 }
 // Feed 
-.feed{
-    margin-left: 15%;
-    margin-right: 15%;
-}
 
 .feedItemLink{
     display: block;
@@ -294,11 +356,6 @@ div.timeline{
 .feedItem{
     list-style: none;
 
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-
-    padding-top: 5vh;
-    padding-bottom: 5vh;
     padding-left: 5vw;
     padding-right: 5vw; 
 
@@ -330,13 +387,11 @@ div.timeline{
 }
 .feedItemTitle {
     font-family: 'Tiro Gurmukhi', serif;
-    font-size: 8vh;
     text-align: left;
 }
 
 .feedItemDesc {
     font-family: 'Roboto', sans-serif;
-    font-size: 3vh;
     color: rgba(0,0,0,0.7);
 }
 
@@ -351,6 +406,44 @@ div.timeline{
 .feedItemImg{
     width: 95%;
     height: auto;
+}
+
+@media(max-width:941px) {
+    .feed{
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 0;
+    }
+    .feedItem{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+    }
+    .feedItemTitle{
+        font-size: 8vw;
+    }
+    .feedItemDesc{
+        font-size: 4vw;
+    }
+}
+@media(min-width:941px) {
+    .feed{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .feedItem{
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .feedItemTitle{
+        font-size: 8vh;
+    }
+    .feedItemDesc{
+        font-size: 3vh;
+    }
 }
 
 // Post 
@@ -391,7 +484,7 @@ div.timeline{
         margin-bottom: 1vh;
     }
     #postDesc{
-        font-size: 2.3vh;
+        font-size: 2vh;
     } 
 
 
@@ -423,7 +516,7 @@ div.timeline{
         h1{
             font-size: 5vh;
             margin-top: 5vh;
-            margin-bottom: 5vh;
+            margin-bottom: 2.5vh;
         } 
         h2{
             font-size: 4.2vh;
@@ -431,10 +524,10 @@ div.timeline{
             margin-bottom: 4.8vh;
         } 
         p{
-            font-size: 2.3vh;
+            font-size: 2vh;
         }
         li{
-            font-size: 2.3vh;
+            font-size: 2vh;
         }
         img{
             width: 80vw; 
