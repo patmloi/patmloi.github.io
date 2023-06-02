@@ -10,7 +10,6 @@
 #header {
     position: relative; 
     display: block; 
-   
 }
 
 #headerTitle {
@@ -30,8 +29,6 @@
 
 #title {
     font-family: 'Tiro Gurmukhi', serif;
-
-
     text-align: center;
     color: #000000; 
     opacity: 100%; 
@@ -39,47 +36,19 @@
 
 }
 
-@media(max-width:941px) {
-    #header {
-        margin-top: 3vh;
-        margin-bottom: 1.5vh;
-    }
-    #title{
-        font-size: 10vw;
-    }
-}
-@media(min-width:941px) {
-    .sectionTitle{
-        font-size: 12vh;
-    }
-    .sectionDesc{
-        font-size: 5vh; 
-    }
-    #header{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-    }
-    #title{
-        font-size: 6vw; 
-    }
-}
-
-// .container{
-//     position: relative; 
-// }
-
 // Home: Sections 
 .section{
     position: relative; 
-    margin-left: 15%;
-    margin-right:15%
+    margin-left: 20%;
+    margin-right: 20%
 }
 .sectionTitle {
     font-family: 'Tiro Gurmukhi', serif;
+    font-size: 2.5rem; 
     text-align: center;
     overflow-wrap: break-word;
-    margin-top: 5vh;
-    margin-bottom: 2vh; 
+    margin-top: 5%;
+    margin-bottom: 2%; 
 }
 
 .sectionTitle.experience{
@@ -95,15 +64,8 @@
     color: #b6d7a8; 
 }
 
-// .sectionTitleText{
-//     opacity: 0.25;
-// }
-
-.sectionDesc{
-    opacity: 0.7;
-}
 .sectionDesc.experience{
-    color: #f4cccc; 
+    color: #ea9999;
 }
 .sectionDesc.skills{
     color: #f9cb9c; 
@@ -117,104 +79,33 @@
 
 .sectionDesc{ 
     font-family: 'Roboto', sans-serif;
-    // color:rgba(0,0,0,0.35);
+    font-size: 1rem; 
     text-align: center;
     margin-top: 2vh;
     margin-bottom: 5vh; 
 }
 
-
-
-@media(max-width:941px) {
-    .sectionTitle{
-        font-size: 12vw;
-    }
-    .sectionDesc{
-        font-size: 5vw; 
-    }
-}
-@media(min-width:941px) {
-    .sectionTitle{
-        font-size: 12vh;
-    }
-    .sectionDesc{
-        font-size: 5vh; 
-    }
-}
-
 // Home: Landing 
 #landing {
-    margin-left: 10%;
-    margin-right: 10%; 
+    margin-top: 2.5%;
+    margin-bottom: 2.5%; 
+    margin-left: 20%;
+    margin-right: 20%; 
 }
-@media(max-width:941px) {
-    #landingText{
+
+#landingText{
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-    }
-    #greeting{
-        font-size: 5vh;
-    }
-    #description{
-        font-size: 2.5vh;
-    }
-    #motivation{
-        font-size: 2vh;
-        margin-left: 10%;
-        margin-right: 10%; 
-        text-align: left;
-    }
-    div.timeline{
-        margin-top: 5vw;
-        margin-bottom: 5vw; 
-    }
-    .row{
-        margin: 2vh;
-    }
-    .col{
-        text-align: center;
-        padding: 1vw;
-    }
-    
-
-}
-@media(min-width:941px) {
-    #landingText{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    #greeting{
-        font-size: 10vh;
-    }
-    #description{
-        font-size: 5vh;
-    }
-    #motivation{
-        font-size: 3.5vh;
-        margin-left: 20%;
-        margin-right: 20%; 
-        text-align: center; 
-    }
-
-    .row{
-        margin: 2vh;
-    }
-    .col{
-        text-align: center;
-        padding: 1vh;
-    }
-
-    
 }
 
 #greeting {
     font-family: 'Tiro Gurmukhi', serif;
+    font-size: 2.8em;
     color: #000000;
-    margin: 1vh;
+    margin: 2%;
+
 }
 
 #description{
@@ -225,8 +116,11 @@
 
 // Home: Motivation
 #motivation{
+    margin-left: 20%;
+    margin-right: 20%; 
+
     display: flex;
-    justify-content: center;
+    text-align: left;
     font-family: "Segoe UI";
     font-style: italic; 
     color: #000000;
@@ -234,10 +128,47 @@
     
 }
 
+// Home: Skills 
+.skills-list{
+    list-style-type: none; 
+    padding-left: 0; 
+    margin: 5%; 
+    margin-top: 0;
+}
+
+.skills-subcat-1{
+    text-align: right; 
+    margin-top: 10%;
+    margin-bottom: 10%; 
+}
+
+.skills-subcat-2{
+    text-align: left; 
+    margin-top: 10%;
+    margin-bottom: 10%; 
+
+}
+
+.skills-subcat-header{
+    margin-top: 0;
+}
+
 // Home: Experience
+li {
+    margin-top: 3%;
+    margin-bottom: 3%; 
+}
+ul.timeline{
+    padding-left: 0;
+}
+
 .timeline {
     position: relative;
     list-style: none;
+}
+
+.duration{
+    font-size: 0.7em;
 }
 
 .exp{
@@ -245,54 +176,6 @@
     list-style: none;
 }
   
-
-@media(max-width:941px) {
-    div.timeline{
-        margin-top: 5vh;
-        margin-bottom: 5vh; 
-    }
-
-    .exp-duration{
-        text-align: center;
-    }
-
-    .exp-desc{
-        text-align: left;
-        border-bottom: 1px solid hsl(0, 0%, 90%);
-    }
-    
-}
-@media(min-width:941px) {
-    .exp-duration{
-        text-align: left;
-        border-right: 1px solid hsl(0, 0%, 90%);
-    }
-
-    .exp-desc{
-        text-align: left;
-    }
-
-    .timeline .timeline-item {
-        position: relative;
-      }
-}
-
-
-
-//   .timeline .timeline-item:after {
-//     position: absolute;
-//     display: block;
-//     top: 0;
-//   }
-  
-//   .timeline .timeline-item:after {
-//     background-color: hsl(0, 0%, 90%);
-//     left: -10%;
-//     border-radius: 50%;
-//     height: 11px;
-//     width: 11px;
-//     content: "";
-//   }
 
 // Home: Skills
 .skillsColTitle{
