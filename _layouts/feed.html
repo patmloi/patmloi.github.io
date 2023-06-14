@@ -4,29 +4,44 @@ layout: default
 {% include header.html %}
 
 <div>
-    <ul class="feed">
+    <div class="feed"> 
         {% assign posts = site[page.folderName] | nested_sort:"date" | reverse %}
+
         {% for post in posts %}
-        
-            <li class="feedItem">
-                <a class="feedItemLink" href={{post.url}}>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="feedItemOrg {{post.organisation | downcase }}">{{post.organisation}}</div>
-                            <div class="feedItemTitle feedItemDiv">{{post.title}}</div>
-                            <div class="feedItemDesc feedItemDiv">{{post.description}}</div>
-                            <!-- <div class="feedItemClick"><a href="{{post.url}}">Continue reading</a> </div> -->
-                        </div>
-                        <div class="col-md feedItemImg feedItemDiv">
-                            <img class="feedItemImg" src="/assets/images/coverImages/{{post.title}}.png">
-                            
-                        </div>
+            {% assign idxmod = forloop.index | modulo: 2 %}
+            {% if idxmod == 1 %}
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="card feedItem">
+                            <img src="/assets/images/coverImages/{{ post.title }}.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title feedItemTitle">{{ post.title }}</h5>
+                                <p class="card-text feedItemDesc">{{ post.description | truncatewords: 20}}</p>
+                                <a href="{{ post.url }}" class="btn btn-secondary btn-sm">Read more</a>
+                            </div>
+                        </div>    
                     </div>
-                </a>
-            </li>
+            
+                    {% if forloop.index < posts.size %}
+                    <div class="col-lg">
+                        <div class="card feedItem">
+                            <img src="/assets/images/coverImages/{{ post.previous.title }}.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title feedItemTitle">{{ post.previous.title }}</h5>
+                                <p class="card-text feedItemDesc">{{ post.previous.description | truncatewords: 20}}</p>
 
+                                <a href="{{ post.previous.url }}" class="btn btn-secondary btn-sm">Read more</a>
+                            </div>
+                        </div>    
+                    </div>
+                    {% else %}
+                    <div class="col-md"></div>
 
+                    {% endif %}
+                </div>
+            {% endif %}
         {% endfor %}
 
-    </ul>
+        
+    </div>
 </div>
