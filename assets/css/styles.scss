@@ -47,10 +47,18 @@
     margin-left: 20%;
     margin-right: 20%
 }
+
+@media(max-width:720px){
+    .sectionTitle.extracurriculars{
+        font-size:1.9em;
+    }
+}
+
 .sectionTitle {
     font-family: 'Tiro Gurmukhi', serif;
-    font-size: 2.5rem; 
+    font-size: 2.5em; 
     text-align: center;
+    text-shadow: 1px 1px 4px rgba(90, 90, 90, 0.1);
     overflow-wrap: break-word;
     margin-top: 5%;
     margin-bottom: 2%; 
@@ -67,6 +75,10 @@
 }
 .sectionTitle.extracurriculars{
     color: #b6d7a8; 
+}
+
+.sectionDesc{
+    text-shadow: 1px 1px 2px rgba(90, 90, 90, 0.1);
 }
 
 .sectionDesc.experience{
@@ -128,6 +140,7 @@
     text-align: left;
     font-family: "Segoe UI";
     font-style: italic; 
+    font-size: 1.1em;
     color: #000000;
     padding: 1vh;
     text-align: justify;
@@ -332,7 +345,6 @@ ul.timeline{
     justify-content: space-between;
 }
 
-
 .card-title.feedItemTitle {
     font-family: 'Tiro Gurmukhi', serif;
     font-size: 1.2em;
@@ -342,7 +354,7 @@ ul.timeline{
 
 .feedItemDesc {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
+    font-size: 1em;
     color: rgba(0,0,0,0.7);
 }
 
@@ -356,111 +368,33 @@ ul.timeline{
 }
 
 // Post 
-#postBody{    
-    text-align: left;
-
-    div{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-    }
-}
-
-#postTitle{
-    font-family: 'Tiro Gurmukhi', serif;
-
-}
-#postDesc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5vw;
-}
-
-#postDuration {
-    font-family: 'Roboto', sans-serif;
-    font-style: italic; 
-}
-
-@media(max-width:941px) {
-    #postBody{
-        margin-left: 8%;
-        margin-right: 8%;
-    }
+@media(min-width:720px) {
     #postTitle{
-        font-size: 5.8vh;
-    }
-    #postDuration{
-        font-size: 1.8vh;
-        margin-top: 1vh; 
-        margin-bottom: 1vh;
+        font-size: 3em;
     }
     #postDesc{
-        font-size: 2vh;
-    } 
-
-
-}
-@media(min-width:941px) {
+        font-size: 1.3em;
+    }
     #postBody{
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    #postTitle{
-        font-size: 6vw;
-    }
-    #postDesc{
-        font-size: 3.1vh;
-    }
-}
-
-
-#postContent{
-    font-family: 'Roboto', sans-serif;
-
-    h1{
-        font-family: 'Tiro Gurmukhi', serif;
-    }
-    h2{
-        font-family: 'Tiro Gurmukhi', serif;
-    }
-    @media(max-width:720px) {
+        margin-left: 20%;
+        margin-right: 20%;
+        
         h1{
-            font-size: 5vh;
-            margin-top: 5vh;
-            margin-bottom: 2.5vh;
-        } 
-        h2{
-            font-size: 4.2vh;
-            margin-top: 4.8vh;
-            margin-bottom: 4.8vh;
-        } 
-        p{
-            font-size: 2vh;
-        }
-        li{
-            font-size: 2vh;
-        }
-        img{
-            width: 80vw; 
+            font-size: 2.8em;
         }
     }
-    @media(min-width:720px) {
+    #postContent{
         h1{
-            font-size: 2.8vw;
-            margin-top: 4vh;
-            margin-bottom: 4vh;
+            font-size: 2.8em;
         }
-
         h2{
-            font-size: 2.2vw;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
+            font-size: 2.4em;
         }
-
         p{
-            font-size: 3.1vh;
+            font-size: 1.2em;
         }
-
-        li{
-            font-size: 3.1vh;
+        ul{
+            font-size: 1.2em;
         }
         img{
             width: 40vw; 
@@ -473,3 +407,81 @@ ul.timeline{
     }
 
 }
+
+@media(max-width:720px){
+    #postTitle{
+        font-size: 1.80em;
+    }
+    #postDesc{
+        font-size: 0.9em;
+    }
+    #postContent{
+        h1{
+            font-size: 1.60em;
+        }
+        h2{
+            font-size: 1.40em;
+        }
+        p{
+            font-size: 0.9em;
+        }
+        img{
+            width: 70vw; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+    }
+    #postBody{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+#postTitle{
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    font-family: 'Tiro Gurmukhi', serif;
+}
+#postDesc {
+    font-family: 'Roboto', sans-serif;
+}
+
+#postDuration {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; 
+    font-size:0.9em;
+}
+
+#postContent{
+    font-family: 'Roboto', sans-serif;
+
+    h1{
+        font-family: 'Tiro Gurmukhi', serif;
+        margin-top: 5vh;
+        margin-bottom: 2.5vh;
+    }
+    h2{
+        margin-top: 3vh;
+        font-family: 'Tiro Gurmukhi', serif;
+    }
+
+}
+
+body::-webkit-scrollbar {
+    width: 0.7em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+
