@@ -8,9 +8,11 @@
 
 // Header
 #header {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%; 
+
     position: relative; 
     display: block; 
-   
 }
 
 #headerTitle {
@@ -30,7 +32,7 @@
 
 #title {
     font-family: 'Tiro Gurmukhi', serif;
-
+    font-size: 2.8em; 
 
     text-align: center;
     color: #000000; 
@@ -39,47 +41,27 @@
 
 }
 
-@media(max-width:941px) {
-    #header {
-        margin-top: 3vh;
-        margin-bottom: 1.5vh;
-    }
-    #title{
-        font-size: 10vw;
-    }
-}
-@media(min-width:941px) {
-    .sectionTitle{
-        font-size: 12vh;
-    }
-    .sectionDesc{
-        font-size: 5vh; 
-    }
-    #header{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-    }
-    #title{
-        font-size: 6vw; 
-    }
-}
-
-// .container{
-//     position: relative; 
-// }
-
 // Home: Sections 
 .section{
     position: relative; 
-    margin-left: 15%;
-    margin-right:15%
+    margin-left: 20%;
+    margin-right: 20%
 }
+
+@media(max-width:720px){
+    .sectionTitle.extracurriculars{
+        font-size:1.9em;
+    }
+}
+
 .sectionTitle {
     font-family: 'Tiro Gurmukhi', serif;
+    font-size: 2.5em; 
     text-align: center;
+    text-shadow: 1px 1px 4px rgba(90, 90, 90, 0.1);
     overflow-wrap: break-word;
-    margin-top: 5vh;
-    margin-bottom: 2vh; 
+    margin-top: 5%;
+    margin-bottom: 2%; 
 }
 
 .sectionTitle.experience{
@@ -95,15 +77,12 @@
     color: #b6d7a8; 
 }
 
-// .sectionTitleText{
-//     opacity: 0.25;
-// }
-
 .sectionDesc{
-    opacity: 0.7;
+    text-shadow: 1px 1px 2px rgba(90, 90, 90, 0.1);
 }
+
 .sectionDesc.experience{
-    color: #f4cccc; 
+    color: #ea9999;
 }
 .sectionDesc.skills{
     color: #f9cb9c; 
@@ -117,104 +96,33 @@
 
 .sectionDesc{ 
     font-family: 'Roboto', sans-serif;
-    // color:rgba(0,0,0,0.35);
+    font-size: 1rem; 
     text-align: center;
     margin-top: 2vh;
     margin-bottom: 5vh; 
 }
 
-
-
-@media(max-width:941px) {
-    .sectionTitle{
-        font-size: 12vw;
-    }
-    .sectionDesc{
-        font-size: 5vw; 
-    }
-}
-@media(min-width:941px) {
-    .sectionTitle{
-        font-size: 12vh;
-    }
-    .sectionDesc{
-        font-size: 5vh; 
-    }
-}
-
 // Home: Landing 
 #landing {
-    margin-left: 10%;
-    margin-right: 10%; 
+    margin-top: 2.5%;
+    margin-bottom: 2.5%; 
+    margin-left: 20%;
+    margin-right: 20%; 
 }
-@media(max-width:941px) {
-    #landingText{
+
+#landingText{
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-    }
-    #greeting{
-        font-size: 5vh;
-    }
-    #description{
-        font-size: 2.5vh;
-    }
-    #motivation{
-        font-size: 2vh;
-        margin-left: 10%;
-        margin-right: 10%; 
-        text-align: left;
-    }
-    div.timeline{
-        margin-top: 5vw;
-        margin-bottom: 5vw; 
-    }
-    .row{
-        margin: 2vh;
-    }
-    .col{
-        text-align: center;
-        padding: 1vw;
-    }
-    
-
-}
-@media(min-width:941px) {
-    #landingText{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    #greeting{
-        font-size: 10vh;
-    }
-    #description{
-        font-size: 5vh;
-    }
-    #motivation{
-        font-size: 3.5vh;
-        margin-left: 20%;
-        margin-right: 20%; 
-        text-align: center; 
-    }
-
-    .row{
-        margin: 2vh;
-    }
-    .col{
-        text-align: center;
-        padding: 1vh;
-    }
-
-    
 }
 
 #greeting {
     font-family: 'Tiro Gurmukhi', serif;
+    font-size: 2.8em;
     color: #000000;
-    margin: 1vh;
+    margin: 2%;
+
 }
 
 #description{
@@ -225,19 +133,61 @@
 
 // Home: Motivation
 #motivation{
+    margin-left: 20%;
+    margin-right: 20%; 
+
     display: flex;
-    justify-content: center;
+    text-align: left;
     font-family: "Segoe UI";
     font-style: italic; 
+    font-size: 1.1em;
     color: #000000;
-    padding: 1vh
+    padding: 1vh;
+    text-align: justify;
     
 }
 
+// Home: Skills 
+.skills-list{
+    list-style-type: none; 
+    padding-left: 0; 
+    margin: 5%; 
+    margin-top: 0;
+}
+
+.skills-subcat-1{
+    text-align: right; 
+    margin-top: 10%;
+    margin-bottom: 10%; 
+}
+
+.skills-subcat-2{
+    text-align: left; 
+    margin-top: 10%;
+    margin-bottom: 10%; 
+
+}
+
+.skills-subcat-header{
+    margin-top: 0;
+}
+
 // Home: Experience
+li {
+    margin-top: 5%;
+    margin-bottom: 5%; 
+}
+ul.timeline{
+    padding-left: 0;
+}
+
 .timeline {
     position: relative;
     list-style: none;
+}
+
+.duration{
+    font-size: 0.7em;
 }
 
 .exp{
@@ -245,54 +195,6 @@
     list-style: none;
 }
   
-
-@media(max-width:941px) {
-    div.timeline{
-        margin-top: 5vh;
-        margin-bottom: 5vh; 
-    }
-
-    .exp-duration{
-        text-align: center;
-    }
-
-    .exp-desc{
-        text-align: left;
-        border-bottom: 1px solid hsl(0, 0%, 90%);
-    }
-    
-}
-@media(min-width:941px) {
-    .exp-duration{
-        text-align: left;
-        border-right: 1px solid hsl(0, 0%, 90%);
-    }
-
-    .exp-desc{
-        text-align: left;
-    }
-
-    .timeline .timeline-item {
-        position: relative;
-      }
-}
-
-
-
-//   .timeline .timeline-item:after {
-//     position: absolute;
-//     display: block;
-//     top: 0;
-//   }
-  
-//   .timeline .timeline-item:after {
-//     background-color: hsl(0, 0%, 90%);
-//     left: -10%;
-//     border-radius: 50%;
-//     height: 11px;
-//     width: 11px;
-//     content: "";
-//   }
 
 // Home: Skills
 .skillsColTitle{
@@ -341,7 +243,46 @@
     font-size: 10rem; 
 
 }
+
 // Feed 
+@media(min-width:720px) {
+    .feed{
+        margin-left: 20%;
+        margin-right: 20%;
+    
+    }
+    
+}
+
+@media(max-width:720px){
+    .feed{
+        margin-left: 10%;
+        margin-right: 10%;
+    
+    }
+
+}
+
+@media(max-height:800px){
+    .feedItem{
+        height: 65vh;
+    }
+}
+@media(max-height:1200px) and (min-height:800px){
+    .feedItem{
+        height: 48vh;
+    }
+}
+@media(min-height:1200px){
+    .feedItem{
+        height: 60vh;
+    }
+}
+
+
+.feed{
+    padding-left: 0;
+}
 
 .feedItemLink{
     display: block;
@@ -356,8 +297,8 @@
 .feedItem{
     list-style: none;
 
-    padding-left: 5vw;
-    padding-right: 5vw; 
+    margin-top: 10%; 
+    margin-bottom: 10%; 
 
     border-radius: 15px; 
     box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.05);
@@ -366,11 +307,17 @@
         text-decoration: none;
         box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.2);
     }
-    
 }
-.feedItemDiv {
-    margin-top: 1vh; 
-    margin-bottom: 1vh; 
+
+.feedItemText{
+    margin: 5%;
+}
+
+.feedItemCol{
+    margin: 2.5%
+    // margin-top: 2.5%;
+    // margin-bottom: 2.5%;
+
 }
 
 .feedItemOrg{
@@ -385,13 +332,29 @@
     color: #f9cb9c; 
 
 }
-.feedItemTitle {
+
+.card-img-top{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title.feedItemTitle {
     font-family: 'Tiro Gurmukhi', serif;
+    font-size: 1.2em;
     text-align: left;
+    margin-bottom: 0rem;
 }
 
 .feedItemDesc {
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
     color: rgba(0,0,0,0.7);
 }
 
@@ -403,155 +366,35 @@
     justify-content: center;
     align-items: center;
 }
-.feedItemImg{
-    width: 95%;
-    height: auto;
-}
-
-@media(max-width:941px) {
-    .feed{
-        margin-left: 5%;
-        margin-right: 5%;
-        padding: 0;
-    }
-    .feedItem{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        padding-top: 1.5vh;
-        padding-bottom: 1.5vh;
-    }
-    .feedItemTitle{
-        font-size: 8vw;
-    }
-    .feedItemDesc{
-        font-size: 4vw;
-    }
-}
-@media(min-width:941px) {
-    .feed{
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-    .feedItem{
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-    }
-    .feedItemTitle{
-        font-size: 8vh;
-    }
-    .feedItemDesc{
-        font-size: 3vh;
-    }
-}
 
 // Post 
-#postBody{    
-    text-align: left;
-
-    div{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-    }
-}
-
-#postTitle{
-    font-family: 'Tiro Gurmukhi', serif;
-
-}
-#postDesc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5vw;
-}
-
-#postDuration {
-    font-family: 'Roboto', sans-serif;
-    font-style: italic; 
-}
-
-@media(max-width:941px) {
-    #postBody{
-        margin-left: 8%;
-        margin-right: 8%;
-    }
+@media(min-width:720px) {
     #postTitle{
-        font-size: 5.8vh;
-    }
-    #postDuration{
-        font-size: 1.8vh;
-        margin-top: 1vh; 
-        margin-bottom: 1vh;
+        font-size: 3em;
     }
     #postDesc{
-        font-size: 2vh;
-    } 
-
-
-}
-@media(min-width:941px) {
+        font-size: 1.1em;
+    }
     #postBody{
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    #postTitle{
-        font-size: 6vw;
-    }
-    #postDesc{
-        font-size: 3.1vh;
-    }
-}
-
-
-#postContent{
-    font-family: 'Roboto', sans-serif;
-
-    h1{
-        font-family: 'Tiro Gurmukhi', serif;
-    }
-    h2{
-        font-family: 'Tiro Gurmukhi', serif;
-    }
-    @media(max-width:720px) {
+        margin-left: 20%;
+        margin-right: 20%;
+        
         h1{
-            font-size: 5vh;
-            margin-top: 5vh;
-            margin-bottom: 2.5vh;
-        } 
-        h2{
-            font-size: 4.2vh;
-            margin-top: 4.8vh;
-            margin-bottom: 4.8vh;
-        } 
-        p{
-            font-size: 2vh;
-        }
-        li{
-            font-size: 2vh;
-        }
-        img{
-            width: 80vw; 
+            font-size: 2.8em;
         }
     }
-    @media(min-width:720px) {
+    #postContent{
         h1{
-            font-size: 2.8vw;
-            margin-top: 4vh;
-            margin-bottom: 4vh;
+            font-size: 2.8em;
         }
-
         h2{
-            font-size: 2.2vw;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
+            font-size: 2.4em;
         }
-
         p{
-            font-size: 3.1vh;
+            font-size: 1.1em;
         }
-
-        li{
-            font-size: 3.1vh;
+        ul{
+            font-size: 1.1em;
         }
         img{
             width: 40vw; 
@@ -564,3 +407,81 @@
     }
 
 }
+
+@media(max-width:720px){
+    #postTitle{
+        font-size: 1.80em;
+    }
+    #postDesc{
+        font-size: 0.9em;
+    }
+    #postContent{
+        h1{
+            font-size: 1.60em;
+        }
+        h2{
+            font-size: 1.40em;
+        }
+        p{
+            font-size: 0.9em;
+        }
+        img{
+            width: 70vw; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+    }
+    #postBody{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+#postTitle{
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    font-family: 'Tiro Gurmukhi', serif;
+}
+#postDesc {
+    font-family: 'Roboto', sans-serif;
+}
+
+#postDuration {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; 
+    font-size:0.9em;
+}
+
+#postContent{
+    font-family: 'Roboto', sans-serif;
+
+    h1{
+        font-family: 'Tiro Gurmukhi', serif;
+        margin-top: 5vh;
+        margin-bottom: 2.5vh;
+    }
+    h2{
+        margin-top: 3vh;
+        font-family: 'Tiro Gurmukhi', serif;
+    }
+
+}
+
+body::-webkit-scrollbar {
+    width: 0.7em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+
